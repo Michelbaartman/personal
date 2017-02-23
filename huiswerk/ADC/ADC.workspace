@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeLite_Workspace Name="ADC" Database="" Version="10.0.0">
+  <Project Name="w1o1" Path="w1o1/w1o1.project" Active="No"/>
+  <Project Name="w1o2" Path="w1o2/w1o2.project" Active="No"/>
+  <Project Name="w1o3" Path="w1o3/w1o3.project" Active="No"/>
+  <Project Name="w1o4" Path="w1o4/w1o4.project" Active="No"/>
+  <Project Name="w1o5" Path="w1o5/w1o5.project" Active="No"/>
+  <Project Name="w3o1" Path="w3o1/w3o1.project" Active="No"/>
+  <Project Name="w3o2" Path="w3o2/w3o2.project" Active="No"/>
+  <Project Name="w3o3" Path="w3o3/w3o3.project" Active="Yes"/>
+  <Project Name="w2o1" Path="w2o1/w2o1.project" Active="No"/>
+  <Project Name="w2o2" Path="w2o2/w2o2.project" Active="No"/>
+  <Project Name="w2o3" Path="w2o3/w2o3.project" Active="No"/>
+  <Project Name="w2o4" Path="w2o4/w2o4.project" Active="No"/>
+  <Project Name="w2o5" Path="w2o5/w2o5.project" Active="No"/>
+  <BuildMatrix>
+    <WorkspaceConfiguration Name="Debug" Selected="yes">
+      <Environment/>
+      <Project Name="w1o1" ConfigName="Debug"/>
+      <Project Name="w1o2" ConfigName="Debug"/>
+      <Project Name="w1o3" ConfigName="Debug"/>
+      <Project Name="w1o4" ConfigName="Debug"/>
+      <Project Name="w1o5" ConfigName="Debug"/>
+      <Project Name="w3o1" ConfigName="Debug"/>
+      <Project Name="w3o2" ConfigName="Debug"/>
+      <Project Name="w3o3" ConfigName="Debug"/>
+      <Project Name="w2o1" ConfigName="Debug"/>
+      <Project Name="w2o2" ConfigName="Debug"/>
+      <Project Name="w2o3" ConfigName="Debug"/>
+      <Project Name="w2o4" ConfigName="Debug"/>
+      <Project Name="w2o5" ConfigName="Debug"/>
+    </WorkspaceConfiguration>
+    <WorkspaceConfiguration Name="Release" Selected="yes">
+      <Environment/>
+      <Project Name="w1o1" ConfigName="Release"/>
+      <Project Name="w1o2" ConfigName="Release"/>
+      <Project Name="w1o3" ConfigName="Release"/>
+      <Project Name="w1o4" ConfigName="Release"/>
+      <Project Name="w1o5" ConfigName="Release"/>
+      <Project Name="w3o1" ConfigName="Release"/>
+      <Project Name="w3o2" ConfigName="Release"/>
+      <Project Name="w3o3" ConfigName="Release"/>
+      <Project Name="w2o1" ConfigName="Release"/>
+      <Project Name="w2o2" ConfigName="Release"/>
+      <Project Name="w2o3" ConfigName="Release"/>
+      <Project Name="w2o4" ConfigName="Release"/>
+      <Project Name="w2o5" ConfigName="Release"/>
+    </WorkspaceConfiguration>
+  </BuildMatrix>
+</CodeLite_Workspace>
