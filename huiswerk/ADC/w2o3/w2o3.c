@@ -30,6 +30,8 @@ int main(int argc, char **argv)
 		}
 	}
 	
+    printf("\n## string = -, strlen = %d ##\n", strlen(arrayA))
+    
 	// reverse with pointers
 	putchar('\n');
 	

@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=w1o5
+ProjectName            :=w2o3n
 ConfigurationName      :=Debug
 WorkspacePath          :=C:/Users/Michel/Documents/git/personal/huiswerk/ADC
-ProjectPath            :=C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w1o5
+ProjectPath            :=C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w2o3n
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="w1o5.txt"
+ObjectsFileList        :="w2o3n.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/w1o5.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/w2o3n.c$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/w1o5.c$(ObjectSuffix): w1o5.c $(IntermediateDirectory)/w1o5.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w1o5/w1o5.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w1o5.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/w1o5.c$(DependSuffix): w1o5.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w1o5.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w1o5.c$(DependSuffix) -MM w1o5.c
+$(IntermediateDirectory)/w2o3n.c$(ObjectSuffix): w2o3n.c $(IntermediateDirectory)/w2o3n.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w2o3n/w2o3n.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w2o3n.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/w2o3n.c$(DependSuffix): w2o3n.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w2o3n.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w2o3n.c$(DependSuffix) -MM w2o3n.c
 
-$(IntermediateDirectory)/w1o5.c$(PreprocessSuffix): w1o5.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w1o5.c$(PreprocessSuffix) w1o5.c
+$(IntermediateDirectory)/w2o3n.c$(PreprocessSuffix): w2o3n.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w2o3n.c$(PreprocessSuffix) w2o3n.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

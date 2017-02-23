@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ w3o3 - Debug ]----------"
-	@cd "w3o3" && "$(MAKE)" -f  "w3o3.mk"
+	@echo "----------Building project:[ w2o3n - Debug ]----------"
+	@cd "w2o3n" && "$(MAKE)" -f  "w2o3n.mk"
 clean:
-	@echo "----------Cleaning project:[ w3o3 - Debug ]----------"
-	@cd "w3o3" && "$(MAKE)" -f  "w3o3.mk" clean
+	@echo "----------Cleaning project:[ w2o3n - Debug ]----------"
+	@cd "w2o3n" && "$(MAKE)" -f  "w2o3n.mk" clean
