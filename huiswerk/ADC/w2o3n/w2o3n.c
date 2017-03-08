@@ -20,7 +20,7 @@ int main(int argc, char **argv)
     char temp;
     // for loop on length of arrayA, puts last letter as temp then 
     // replaces last with the first, then the first with temp.
-    for(int c = 0; c <= (length)/2; c++){
+    for(int c = 0; c <= length/2; c++){
         temp = arrayA[length-c];
         arrayA[length-c] = arrayA[c];
         arrayA[c] = temp;
@@ -35,26 +35,20 @@ int main(int argc, char **argv)
     printf("\ninput = ");
     fgets(arrayA, 80, stdin);
     length = strlen(arrayA)-2;
+	
+    char *ps = arrayA;
+    for(int i = 0; i < length/2; i++){
+        char *pe = arrayA + length - i;
+        char temp = *ps;
+        *ps = *pe;
+        *pe = temp;
+        ps++;
+    }
     
-    
-    char *pointer = arrayA + length; // grabs the last pointer of the array, then counts down
-	
-	printf("\np, v | %d, %c", pointer, arrayA[length]);
-	*pointer = arrayA;
-	printf("\np, v | %d, %c", pointer, arrayA[0]);
-	*pointer--;
-	*pointer = arrayA - 1;
-	printf("\np, v | %d, %c", pointer, arrayA[length-1]);
-	
-//	for(int c = 0; c >= length; c++){
-//		*pointer = arrayA 
-//		printf("\np, v | %d, %c", pointer, arrayA[0]);
-//	}
-	
-//    for(int c = length; c >= 0; c--){ // put char in temp, then copy char of first pointer?
-//        printf("\np, v | %d, %c", pointer, *pointer);
-//        *pointer--;
-//    }
+    // prints pointer array
+    for(int c = 0; c <= length; c++){
+        printf("%c", arrayA[c]);
+    }
     
 	return 0;
 }
