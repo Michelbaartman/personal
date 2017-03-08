@@ -1,0 +1,106 @@
+\hypertarget{w3o3_8c}{}\section{w3o3/w3o3.c File Reference}
+\label{w3o3_8c}\index{w3o3/w3o3.\+c@{w3o3/w3o3.\+c}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdbool.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{w3o3_8c_aa93e7c4b0981ecc6aa6362f2a558d43f}{count} (int a\mbox{[}$\,$\mbox{]}, int size, int n)
+\begin{DoxyCompactList}\small\item\em count counts the amount of times N within array a\mbox{[}\mbox{]}. \end{DoxyCompactList}\item 
+bool \hyperlink{w3o3_8c_a0bc2b7b32c4d167125996a6568fb561f}{bit\+\_\+check} (int a\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em bit\+\_\+check checks wether the array exists of 1\textquotesingle{}s or 0\textquotesingle{}s. if the array has a number higher then 1 then it returns false. otherwise true. \end{DoxyCompactList}\item 
+bool \hyperlink{w3o3_8c_a2a6029b34910ee33c985aff7b2e59387}{count\+\_\+check} (int a\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em count\+\_\+check checks wether the array has an even number of 1\textquotesingle{}s and 0\textquotesingle{}s. Returns a false if not, otherwise true. \end{DoxyCompactList}\item 
+bool \hyperlink{w3o3_8c_aa241a4c6507171f7d9dfb5768ab712c6}{recur\+\_\+check} (int a\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em recur\+\_\+check Checks wether any diget in the array appears more then 3 times in a row. if one does, return false. otherwise returns true. \end{DoxyCompactList}\item 
+bool \hyperlink{w3o3_8c_aaf545fb4ed210fb287e4bdf857ce381a}{valid\+\_\+row} (int a\mbox{[}$\,$\mbox{]}, int size)
+\begin{DoxyCompactList}\small\item\em valid\+\_\+row goes by the bit\+\_\+check, count\+\_\+check and recur\+\_\+check functions with the given array, then checks if all return values are true. if they are, returns true, otherwise false. \end{DoxyCompactList}\item 
+int \hyperlink{w3o3_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\begin{DoxyCompactList}\small\item\em main creates (2) arrays and prints them, calls the valid\+\_\+row for each of the arrays and checks wether they are valid or not. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{w3o3_8c_a0bc2b7b32c4d167125996a6568fb561f}\label{w3o3_8c_a0bc2b7b32c4d167125996a6568fb561f}} 
+\index{w3o3.\+c@{w3o3.\+c}!bit\+\_\+check@{bit\+\_\+check}}
+\index{bit\+\_\+check@{bit\+\_\+check}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{bit\+\_\+check()}{bit\_check()}}
+{\footnotesize\ttfamily bool bit\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+bit\+\_\+check checks wether the array exists of 1\textquotesingle{}s or 0\textquotesingle{}s. if the array has a number higher then 1 then it returns false. otherwise true. 
+
+
+
+Definition at line 33 of file w3o3.\+c.
+
+\mbox{\Hypertarget{w3o3_8c_aa93e7c4b0981ecc6aa6362f2a558d43f}\label{w3o3_8c_aa93e7c4b0981ecc6aa6362f2a558d43f}} 
+\index{w3o3.\+c@{w3o3.\+c}!count@{count}}
+\index{count@{count}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{count()}{count()}}
+{\footnotesize\ttfamily int count (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{size,  }\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+count counts the amount of times N within array a\mbox{[}\mbox{]}. 
+
+
+
+Definition at line 18 of file w3o3.\+c.
+
+\mbox{\Hypertarget{w3o3_8c_a2a6029b34910ee33c985aff7b2e59387}\label{w3o3_8c_a2a6029b34910ee33c985aff7b2e59387}} 
+\index{w3o3.\+c@{w3o3.\+c}!count\+\_\+check@{count\+\_\+check}}
+\index{count\+\_\+check@{count\+\_\+check}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{count\+\_\+check()}{count\_check()}}
+{\footnotesize\ttfamily bool count\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+count\+\_\+check checks wether the array has an even number of 1\textquotesingle{}s and 0\textquotesingle{}s. Returns a false if not, otherwise true. 
+
+
+
+Definition at line 50 of file w3o3.\+c.
+
+\mbox{\Hypertarget{w3o3_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{w3o3_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{w3o3.\+c@{w3o3.\+c}!main@{main}}
+\index{main@{main}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+
+
+main creates (2) arrays and prints them, calls the valid\+\_\+row for each of the arrays and checks wether they are valid or not. 
+
+
+
+Definition at line 117 of file w3o3.\+c.
+
+\mbox{\Hypertarget{w3o3_8c_aa241a4c6507171f7d9dfb5768ab712c6}\label{w3o3_8c_aa241a4c6507171f7d9dfb5768ab712c6}} 
+\index{w3o3.\+c@{w3o3.\+c}!recur\+\_\+check@{recur\+\_\+check}}
+\index{recur\+\_\+check@{recur\+\_\+check}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{recur\+\_\+check()}{recur\_check()}}
+{\footnotesize\ttfamily bool recur\+\_\+check (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+recur\+\_\+check Checks wether any diget in the array appears more then 3 times in a row. if one does, return false. otherwise returns true. 
+
+
+
+Definition at line 67 of file w3o3.\+c.
+
+\mbox{\Hypertarget{w3o3_8c_aaf545fb4ed210fb287e4bdf857ce381a}\label{w3o3_8c_aaf545fb4ed210fb287e4bdf857ce381a}} 
+\index{w3o3.\+c@{w3o3.\+c}!valid\+\_\+row@{valid\+\_\+row}}
+\index{valid\+\_\+row@{valid\+\_\+row}!w3o3.\+c@{w3o3.\+c}}
+\subsubsection{\texorpdfstring{valid\+\_\+row()}{valid\_row()}}
+{\footnotesize\ttfamily bool valid\+\_\+row (\begin{DoxyParamCaption}\item[{int}]{a\mbox{[}$\,$\mbox{]},  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+valid\+\_\+row goes by the bit\+\_\+check, count\+\_\+check and recur\+\_\+check functions with the given array, then checks if all return values are true. if they are, returns true, otherwise false. 
+
+
+
+Definition at line 95 of file w3o3.\+c.
+
