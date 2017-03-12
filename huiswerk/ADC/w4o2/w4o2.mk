@@ -5,16 +5,16 @@
 ## Debug
 ProjectName            :=w4o2
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/Users/Michel/Documents/git/personal/huiswerk/ADC
-ProjectPath            :=C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w4o2
+WorkspacePath          :=D:/git/personal/huiswerk/ADC
+ProjectPath            :=D:/git/personal/huiswerk/ADC/w4o2
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=Michel
-Date                   :=09/03/2017
-CodeLitePath           :="C:/Program Files/CodeLite"
+User                   :=Baartman
+Date                   :=12/03/2017
+CodeLitePath           :="C:/Program Files (x86)/CodeLite"
 LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
 ObjectSuffix           :=.o
@@ -61,7 +61,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Program Files\CodeLite
+CodeLiteDir:=C:\Program Files (x86)\CodeLite
 Objects0=$(IntermediateDirectory)/w4o2.c$(ObjectSuffix) 
 
 
@@ -94,7 +94,7 @@ PreBuild:
 ## Objects
 ##
 $(IntermediateDirectory)/w4o2.c$(ObjectSuffix): w4o2.c $(IntermediateDirectory)/w4o2.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "C:/Users/Michel/Documents/git/personal/huiswerk/ADC/w4o2/w4o2.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w4o2.c$(ObjectSuffix) $(IncludePath)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w4o2/w4o2.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w4o2.c$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/w4o2.c$(DependSuffix): w4o2.c
 	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w4o2.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w4o2.c$(DependSuffix) -MM w4o2.c
 

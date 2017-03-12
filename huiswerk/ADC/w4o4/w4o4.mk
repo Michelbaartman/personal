@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=w4o1
+ProjectName            :=w4o4
 ConfigurationName      :=Debug
 WorkspacePath          :=D:/git/personal/huiswerk/ADC
-ProjectPath            :=D:/git/personal/huiswerk/ADC/w4o1
+ProjectPath            :=D:/git/personal/huiswerk/ADC/w4o4
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="w4o1.txt"
+ObjectsFileList        :="w4o4.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files (x86)\CodeLite
-Objects0=$(IntermediateDirectory)/w4o1.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/w4o4.c$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,13 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/w4o1.c$(ObjectSuffix): w4o1.c $(IntermediateDirectory)/w4o1.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w4o1/w4o1.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w4o1.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/w4o1.c$(DependSuffix): w4o1.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w4o1.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w4o1.c$(DependSuffix) -MM w4o1.c
+$(IntermediateDirectory)/w4o4.c$(ObjectSuffix): w4o4.c $(IntermediateDirectory)/w4o4.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w4o4/w4o4.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w4o4.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/w4o4.c$(DependSuffix): w4o4.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w4o4.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w4o4.c$(DependSuffix) -MM w4o4.c
 
-$(IntermediateDirectory)/w4o1.c$(PreprocessSuffix): w4o1.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w4o1.c$(PreprocessSuffix) w4o1.c
+$(IntermediateDirectory)/w4o4.c$(PreprocessSuffix): w4o4.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w4o4.c$(PreprocessSuffix) w4o4.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
