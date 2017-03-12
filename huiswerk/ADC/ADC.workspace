@@ -14,9 +14,11 @@
   <Project Name="w2o4" Path="w2o4/w2o4.project" Active="No"/>
   <Project Name="w2o5" Path="w2o5/w2o5.project" Active="No"/>
   <Project Name="Game" Path="Game/Game.project" Active="No"/>
-  <Project Name="w2o3n" Path="w2o3n/w2o3n.project" Active="Yes"/>
+  <Project Name="w2o3n" Path="w2o3n/w2o3n.project" Active="No"/>
   <Project Name="w3o4" Path="w3o4/w3o4.project" Active="No"/>
   <Project Name="w3o5" Path="w3o5/w3o5.project" Active="No"/>
+  <Project Name="w4o1" Path="w4o1/w4o1.project" Active="No"/>
+  <Project Name="w4o2" Path="w4o2/w4o2.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -37,6 +39,8 @@
       <Project Name="w2o3n" ConfigName="Debug"/>
       <Project Name="w3o4" ConfigName="Debug"/>
       <Project Name="w3o5" ConfigName="Debug"/>
+      <Project Name="w4o1" ConfigName="Debug"/>
+      <Project Name="w4o2" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -57,6 +61,8 @@
       <Project Name="w2o3n" ConfigName="Release"/>
       <Project Name="w3o4" ConfigName="Release"/>
       <Project Name="w3o5" ConfigName="Release"/>
+      <Project Name="w4o1" ConfigName="Release"/>
+      <Project Name="w4o2" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
