@@ -38,7 +38,7 @@ int main(int argc, char **argv)
     
     int count = 0;
     while(1){
-        if( count > 50){
+        if( count > 500){
             digitalWrite(block, 0);
             blockY++;
             if(blockY > 4){
