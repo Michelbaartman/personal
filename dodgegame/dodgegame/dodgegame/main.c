@@ -41,7 +41,7 @@ int main(int argc, char **argv)
         if( count > 50){
             digitalWrite(block, 0);
             blockY++;
-            if(blockY > 4){
+            if(blockY > 3){
                 blockY = -1;
             }
             block = ledMatrix[blockX][blockY];
