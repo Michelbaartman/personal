@@ -5,7 +5,7 @@
 int main(int argc, char **argv)
 {
     wiringPiSetupGpio();
-    int ledMAtrix[2][4]= {
+    int ledMatrix[2][4]= {
         {5,6,13,19},
         {12,16,20,21}};
     int i = 0;
@@ -16,7 +16,7 @@ int main(int argc, char **argv)
             pinMode(ledMatrix[i][j], OUTPUT);
             digitalWrite(ledMatrix[i][j], HIGH);
             delay(100);
-            digitalWrite(ledAMtrix[i][j], LOW);
+            digitalWrite(ledMatrix[i][j], LOW);
             delay(100);
         }
     }
@@ -37,10 +37,10 @@ int main(int argc, char **argv)
     
     int count = 0;
     while(1){
-        if(count>50){
+        if(count>=50){
             digitalWrite(block, 0);
             if(blockY > 5){
-                blockY = -1;
+                blockY -= 1;
             }
             blockY ++;
             block = ledMatrix[0][blockY];
