@@ -33,7 +33,7 @@ int main(int argc, char **argv)
     int blockX = 0;
     int blockY = 0;
     int block = ledMatrix[blockY][blockX];
-    digitalWrite(pos,1);
+    digitalWrite(player,1);
     
     int count = 0;
     while(1){
@@ -56,7 +56,7 @@ int main(int argc, char **argv)
             player = ledMatrix[0][3];
             digitalWrite(player,1);
         }
-        count++
+        count++;
         delay(5);
     }
     
