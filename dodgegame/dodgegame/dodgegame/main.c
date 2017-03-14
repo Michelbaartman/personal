@@ -12,8 +12,9 @@ int main(int argc, char **argv)
         {{12,false},{16,false},{20,false},{21,false}}};
     
     // set led matrix
-    for(int i; i < 2; i++){
-        for(int j = 0; j < 4; j++){
+    int i, j;
+    for(i = 0; i < 2; i++){
+        for(j = 0; j < 4; j++){
             pinMode(ledMatrix[i][j][0], OUTPUT);
             digitalWrite(ledMatrix[i][j][0], HIGH);
             delay(100);
