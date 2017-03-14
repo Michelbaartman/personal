@@ -25,14 +25,14 @@ int main(int argc, char **argv)
     }
     
     // block sequences
-    int blockSequence[1][2][4] = {
-        {1, 0, 0, 0}, {0, 0, 1, 1}
-    }
-    
-    int currentSequence[2][8] = {
-        {0, 1, 0, 1, 0, 0, 0, 0}, 
-        {0, 0, 0, 1, 0, 1, 0, 0}
-    }
+//    int blockSequence[1][2][4] = {
+//        {1, 0, 0, 0}, {0, 0, 1, 1}
+//    }
+//    
+//    int currentSequence[2][8] = {
+//        {0, 1, 0, 1, 0, 0, 0, 0}, 
+//        {0, 0, 0, 1, 0, 1, 0, 0}
+//    }
     
     // setup player controls
     int button1 = 26;
