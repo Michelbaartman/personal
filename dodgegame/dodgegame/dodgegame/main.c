@@ -10,12 +10,10 @@ int main(int argc, char **argv)
     int ledMatrix[2][4][2] = {
         {{5,false},{6,false},{13,false},{19,false}},
         {{12,false},{16,false},{20,false},{21,false}}};
-    int i = 0;
-    int j = 0;
     
     // set led matrix
-    for(i; i < 2; i++){
-        for(j = 0; j < 4; j++){
+    for(int i; i < 2; i++){
+        for(int j = 0; j < 4; j++){
             pinMode(ledMatrix[i][j][0], OUTPUT);
             digitalWrite(ledMatrix[i][j][0], HIGH);
             delay(100);
@@ -57,11 +55,11 @@ int main(int argc, char **argv)
     int speed = 50;
     while(1){
         // track movement
-        if(count > speed){
-            for(int i = 0; i < 8; i++){
-            }
-        }
-        
+//        if(count > speed){
+//            for(int i = 0; i < 8; i++){
+//            }
+//        }
+//        
         // player input
         if(digitalRead(button1)){
             digitalWrite(player, 0);
