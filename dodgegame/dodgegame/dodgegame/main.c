@@ -32,20 +32,20 @@ int main(int argc, char **argv)
     
     int blockX = 0;
     int blockY = 0;
-    int block = ledMatrix[blockY][blockX];
+    int block = ledMatrix[blockX][blockY];
     digitalWrite(player,1);
+    digitalWrite(block, 1)
     
     int count = 0;
     while(1){
-        if(count>=50){
-            digitalWrite(block, 0);
-            if(blockY > 5){
-                blockY -= 1;
+        if( count > 50){
+            digitalWrite(block, 0)
+            blockY++;
+            if(blockY > 4){
+                blockY = -1;
             }
-            blockY ++;
-            block = ledMatrix[0][blockY];
-            digitalWrite(block, 1);
-            count = 0;
+            block = ledMatrix[blockX][blockY];
+            digitalWrite(block, 1)
         }
         if(digitalRead(button1)){
             digitalWrite(player, 0);
