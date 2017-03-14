@@ -37,8 +37,9 @@ int main(int argc, char **argv)
     digitalWrite(block, 1);
     
     int count = 0;
+    int speed = 50;
     while(1){
-        if( count > 50){
+        if( count > speed){
             digitalWrite(block, 0);
             blockY++;
             if(blockY > 3){
@@ -47,6 +48,7 @@ int main(int argc, char **argv)
             block = ledMatrix[blockX][blockY];
             digitalWrite(block, 1);
             count = 0;
+            speed --;
         }
         if(digitalRead(button1)){
             digitalWrite(player, 0);
