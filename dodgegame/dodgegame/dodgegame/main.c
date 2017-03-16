@@ -3,7 +3,7 @@
 #include <wiringShift.h>
 #include <stdbool.h>
 
-void led_switch(int matrix[][][], int ledX, int ledY, char command) // s = switch, + = on, - = off
+void led_switch(int matrix[2][4][2], int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
     int* led = matrix[ledX][ledY][0];
     int* led_state = matrix[ledX][ledY][1];
