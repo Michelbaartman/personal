@@ -3,6 +3,8 @@
 #include <wiringShift.h>
 #include <stdbool.h>
 
+#delare int ledMatrix[2][4][2] = { {{5,false},{6,false},{13,false},{19,false}}, {{12,false},{16,false},{20,false},{21,false}}};
+
 void led_switch(int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
     int* led = ledMatrix[ledX][ledY][0];
@@ -20,9 +22,6 @@ int main(int argc, char **argv)
 {
     // layout led matrix
     wiringPiSetupGpio();
-    int ledMatrix[2][4][2] = {
-        {{5,false},{6,false},{13,false},{19,false}},
-        {{12,false},{16,false},{20,false},{21,false}}};
     
     // set led matrix
     int posX, posY;
