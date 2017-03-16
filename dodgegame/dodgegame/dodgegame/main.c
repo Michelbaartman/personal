@@ -3,16 +3,16 @@
 #include <wiringShift.h>
 #include <stdbool.h>
 
-void led_switch(int matrix[], int ledX, int ledY, char command) // s = switch, + = on, - = off
+void led_switch(int matrix[][][], int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
     int* led = matrix[ledX][ledY][0];
     int* led_state = matrix[ledX][ledY][1];
-    if(command == '+' && led_state != true){ // turn led on
-        digitalWrite(led, 1);
-        led_state = true;
-    } else if(command == '-' && led_state != false){
-        digitalWrite(led, 0);
-        led_state = false;
+    if(command == '+' && *led_state != true){ // turn led on
+        digitalWrite(*led, 1);
+        *led_state = true;
+    } else if(command == '-' && *led_state != false){
+        digitalWrite(*led, 0);
+        *led_state = false;
     }
 }
 
@@ -30,7 +30,6 @@ int main(int argc, char **argv)
         for(i = 0; i < 2; i++){
             for(j = 0; j < 4; j++){
                 pinMode(ledMatrix[i][j][0], OUTPUT);
-                digitalWrite(ledMatrix[i][j][0], HIGH);
                 led_switch(ledMatrix, i, j, '+');
                 delay(100);
                 led_switch(ledMatrix, i, j, '-');
