@@ -8,11 +8,11 @@ int ledMatrix[2][4][2] = { { {5,false},{6,false},{13,false},{19,false} }, { {12,
 void led_switch(int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
     int led = ledMatrix[ledX][ledY][0];
-    int *led_state = ledMatrix[ledX][ledY][1];
-    if(command == '+' && *led_state != true){ // turn led on
+    int *led_state = *ledMatrix[ledX][ledY][1];
+    if(command == '+' && led_state != true){ // turn led on
         digitalWrite(led, 1);
         led_state = true;
-    } else if(command == '-' && *led_state != false){
+    } else if(command == '-' && led_state != false){
         digitalWrite(led, 0);
         led_state = false;
     }
