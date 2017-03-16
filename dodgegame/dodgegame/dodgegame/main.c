@@ -3,10 +3,10 @@
 #include <wiringShift.h>
 #include <stdbool.h>
 
-void led_switch(int matrix[2][4][2], int ledX, int ledY, char command) // s = switch, + = on, - = off
+void led_switch(int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
-    int* led = matrix[ledX][ledY][0];
-    int* led_state = matrix[ledX][ledY][1];
+    int* led = ledMatrix[ledX][ledY][0];
+    int* led_state = ledMatrix[ledX][ledY][1];
     if(command == '+' && *led_state != true){ // turn led on
         digitalWrite(*led, 1);
         *led_state = true;
@@ -25,14 +25,14 @@ int main(int argc, char **argv)
         {{12,false},{16,false},{20,false},{21,false}}};
     
     // set led matrix
-    int i, j;
+    int posX, posY;
     while(1){
-        for(i = 0; i < 2; i++){
-            for(j = 0; j < 4; j++){
-                pinMode(ledMatrix[i][j][0], OUTPUT);
-                led_switch(ledMatrix, i, j, '+');
+        for(posX = 0; posX < 2; posX++){
+            for(posY = 0; posY < 4; posY++){
+                pinMode(ledMatrix[posX][posY][0], OUTPUT);
+                led_switch(posX, posY, '+');
                 delay(100);
-                led_switch(ledMatrix, i, j, '-');
+                led_switch(posX, posY, '-');
                 delay(100);
             }
         }
