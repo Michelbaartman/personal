@@ -3,29 +3,39 @@
 #include <wiringShift.h>
 #include <stdbool.h>
 
-int ledMatrix[2][4][2] = { { {5,false},{6,false},{13,false},{19,false} }, { {12,false},{16,false},{20,false},{21,false} } };
+// x, y
+// 00, 10
+// 01, 11
+// 02, 12
+// 03, 13
+int ledMatrix[2][4][2] = { { {26,false},{4,false},{19,false},{13,false} }, { {21,false},{20,false},{16,false},{12,false} } };
 
 void led_switch(int ledX, int ledY, char command) // s = switch, + = on, - = off
 {
+    printf("led_switch(%d, %d, %c)\n", ledX, ledY, command);
     int led = ledMatrix[ledX][ledY][0];
     int led_state = ledMatrix[ledX][ledY][1];
     if(command == '+' && led_state != true){ // turn led on
         digitalWrite(led, 1);
+        printf("turn led %d on\n", led);
         led_state = true;
     } else if(command == '-' && led_state != false){
         digitalWrite(led, 0);
+        printf("turn led %d off\n", led);
         led_state = false;
     }
 }
 
 int main(int argc, char **argv)
 {
+    printf("main()\n")
     // layout led matrix
     wiringPiSetupGpio();
     
     // set led matrix
     int posX, posY;
     while(1){
+        printf("loop\n");
         for(posX = 0; posX < 2; posX++){
             for(posY = 0; posY < 4; posY++){
                 pinMode(ledMatrix[posX][posY][0], OUTPUT);
