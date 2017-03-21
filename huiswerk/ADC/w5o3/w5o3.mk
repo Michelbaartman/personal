@@ -3,10 +3,10 @@
 ## any manual changes will be erased      
 ##
 ## Debug
-ProjectName            :=w5o2
+ProjectName            :=w5o3
 ConfigurationName      :=Debug
 WorkspacePath          :=D:/git/personal/huiswerk/ADC
-ProjectPath            :=D:/git/personal/huiswerk/ADC/w5o2
+ProjectPath            :=D:/git/personal/huiswerk/ADC/w5o3
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
@@ -32,7 +32,7 @@ Preprocessors          :=
 ObjectSwitch           :=-o 
 ArchiveOutputSwitch    := 
 PreprocessOnlySwitch   :=-E
-ObjectsFileList        :="w5o2.txt"
+ObjectsFileList        :="w5o3.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files (x86)\CodeLite
-Objects0=$(IntermediateDirectory)/w5o2.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/queue.c$(ObjectSuffix) $(IntermediateDirectory)/w5o3.c$(ObjectSuffix) 
 
 
 
@@ -93,13 +93,21 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/w5o2.c$(ObjectSuffix): w5o2.c $(IntermediateDirectory)/w5o2.c$(DependSuffix)
-	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w5o2/w5o2.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w5o2.c$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/w5o2.c$(DependSuffix): w5o2.c
-	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w5o2.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w5o2.c$(DependSuffix) -MM w5o2.c
+$(IntermediateDirectory)/queue.c$(ObjectSuffix): queue.c $(IntermediateDirectory)/queue.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w5o3/queue.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/queue.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/queue.c$(DependSuffix): queue.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/queue.c$(ObjectSuffix) -MF$(IntermediateDirectory)/queue.c$(DependSuffix) -MM queue.c
 
-$(IntermediateDirectory)/w5o2.c$(PreprocessSuffix): w5o2.c
-	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w5o2.c$(PreprocessSuffix) w5o2.c
+$(IntermediateDirectory)/queue.c$(PreprocessSuffix): queue.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/queue.c$(PreprocessSuffix) queue.c
+
+$(IntermediateDirectory)/w5o3.c$(ObjectSuffix): w5o3.c $(IntermediateDirectory)/w5o3.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/w5o3/w5o3.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/w5o3.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/w5o3.c$(DependSuffix): w5o3.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/w5o3.c$(ObjectSuffix) -MF$(IntermediateDirectory)/w5o3.c$(DependSuffix) -MM w5o3.c
+
+$(IntermediateDirectory)/w5o3.c$(PreprocessSuffix): w5o3.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/w5o3.c$(PreprocessSuffix) w5o3.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
