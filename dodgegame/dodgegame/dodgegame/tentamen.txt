@@ -1,0 +1,98 @@
+1. c functie die gevenen int rij met een size de som positieve getallen berekent, anders 0
+
+int a[] = {3, -3, 5, -21, 46, -80, 3};
+int len = sizeof(a)/sizeof(a[0]);
+
+int som_pos(int a[], int len)
+{
+	int sum = 0;
+	int negcount = 0;
+	for(int i = 0; i < size; i ++){
+		if(a[i] > -1){
+			sum = sum + a[i];
+		}
+	}
+	return sum;
+}
+
+printf("som positieve getallen: %d\n", som_pos(a, len));
+
+
+
+2. 
+int a[] = {3, -3, 5, -21, 46, -80, 3};
+int len = sizeof(a)/sizeof(a[0]);
+
+int resurcive_som_pos(int a[], int len)
+{
+	static int sum = 0;
+	len = len - 1;
+	
+	if(len == 1){
+		sum += recursive_som_pos(a, len);
+	}
+	
+	return sum;
+}
+
+int recursive_som_pos(int a[], int len)
+{
+	if(len == 1){
+		if(a[0] > 0){
+			return a[len-1];
+		}
+		return 0;
+	}
+	
+}
+printf("som positieve getallen: %d\n", som_pos(a, len));
+
+3. 
+int len_longest_word(char s[])
+{
+	int max = 0;
+	int count = 0;
+	
+	for(int i = 0; s[i] != '\0'; ++i){ // int supercount = 0; while(s[supercount] != '\0')
+		if(s[supercount] != ' '){
+			++count;
+			++supercount
+		} else if(count > max){
+			max = count;
+			count = 0;
+		} else {
+			count = 0;
+		}
+	}
+	return max;
+}
+
+int i = 0
+int j = 0
+int k = 0
+i ++
+j = i++ // i wordt geassigned aan j voordat er 1 bij op wordt geteld
+k = ++i // i wordt geassigned aan k nadat er 1 op wordt geteld
+
+i == 3
+j == 1
+k == 3
+
+4. 
+int num_unique(int a[], int len)
+{
+	int unique = 0;
+	int count = 0;
+	for(int i = 0; i < len; ++i){
+		for(int j = i; j <= 0; --j){
+			if a[i] == a[j]{
+				++count;
+			}
+		}
+		if(count == 1){
+			++unique;
+			int count = 0;
+		}
+	}
+	return unique;
+}
