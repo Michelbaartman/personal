@@ -93,6 +93,9 @@
     </Configuration>
   </Settings>
   <VirtualDirectory Name="src">
+    <File Name="main.c"/>
+  </VirtualDirectory>
+  <VirtualDirectory Name="w5o3">
     <File Name="queue.c"/>
     <File Name="queue.h"/>
     <File Name="w5o3.c"/>
