@@ -55,6 +55,22 @@ int main(int argc, char **argv)
 		}
 	}
 	
+	count = 0;
+	printf("-slowing down-\n");
+	li = 22;
+	bvalue = lv_to_percentage(li);
+	goal = spd*bvalue;
+	printf("spd = %d, li = %d, bval = %f\n", spd, li, bvalue);
+	while(curSpd > goal){
+		printf("[curSpd = %d, goal = %d]\n",curSpd, goal);
+		curSpd -= (curSpd - goal)*factor;
+		Sleep(50);
+		count ++;
+		if(count>10){
+			break;
+		}
+	}
+	
 	
 	
 	return 0;

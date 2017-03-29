@@ -26,7 +26,8 @@
   <Project Name="w5o1" Path="w5o1/w5o1.project" Active="No"/>
   <Project Name="w5o2" Path="w5o2/w5o2.project" Active="No"/>
   <Project Name="w5o3" Path="w5o3/w5o3.project" Active="No"/>
-  <Project Name="Test" Path="Test/Test.project" Active="Yes"/>
+  <Project Name="Test" Path="Test/Test.project" Active="No"/>
+  <Project Name="legobots" Path="legobots/legobots.project" Active="Yes"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>
@@ -57,6 +58,7 @@
       <Project Name="w5o2" ConfigName="Debug"/>
       <Project Name="w5o3" ConfigName="Debug"/>
       <Project Name="Test" ConfigName="Debug"/>
+      <Project Name="legobots" ConfigName="Debug"/>
     </WorkspaceConfiguration>
     <WorkspaceConfiguration Name="Release" Selected="yes">
       <Environment/>
@@ -87,6 +89,7 @@
       <Project Name="w5o2" ConfigName="Release"/>
       <Project Name="w5o3" ConfigName="Release"/>
       <Project Name="Test" ConfigName="Release"/>
+      <Project Name="legobots" ConfigName="Release"/>
     </WorkspaceConfiguration>
   </BuildMatrix>
 </CodeLite_Workspace>
