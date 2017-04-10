@@ -13,7 +13,7 @@ CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
 User                   :=Baartman
-Date                   :=28/03/2017
+Date                   :=10/04/2017
 CodeLitePath           :="C:/Program Files (x86)/CodeLite"
 LinkerName             :=C:/TDM-GCC-32/bin/g++.exe
 SharedObjectLinkerName :=C:/TDM-GCC-32/bin/g++.exe -shared -fPIC
@@ -62,7 +62,7 @@ AS       := C:/TDM-GCC-32/bin/as.exe
 ## User defined environment variables
 ##
 CodeLiteDir:=C:\Program Files (x86)\CodeLite
-Objects0=$(IntermediateDirectory)/main_v5.c$(ObjectSuffix) 
+Objects0=$(IntermediateDirectory)/main_v5.c$(ObjectSuffix) $(IntermediateDirectory)/bluetooth.c$(ObjectSuffix) $(IntermediateDirectory)/drawing.c$(ObjectSuffix) 
 
 
 
@@ -100,6 +100,22 @@ $(IntermediateDirectory)/main_v5.c$(DependSuffix): main_v5.c
 
 $(IntermediateDirectory)/main_v5.c$(PreprocessSuffix): main_v5.c
 	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main_v5.c$(PreprocessSuffix) main_v5.c
+
+$(IntermediateDirectory)/bluetooth.c$(ObjectSuffix): bluetooth.c $(IntermediateDirectory)/bluetooth.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/legobots/bluetooth.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/bluetooth.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/bluetooth.c$(DependSuffix): bluetooth.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/bluetooth.c$(ObjectSuffix) -MF$(IntermediateDirectory)/bluetooth.c$(DependSuffix) -MM bluetooth.c
+
+$(IntermediateDirectory)/bluetooth.c$(PreprocessSuffix): bluetooth.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/bluetooth.c$(PreprocessSuffix) bluetooth.c
+
+$(IntermediateDirectory)/drawing.c$(ObjectSuffix): drawing.c $(IntermediateDirectory)/drawing.c$(DependSuffix)
+	$(CC) $(SourceSwitch) "D:/git/personal/huiswerk/ADC/legobots/drawing.c" $(CFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/drawing.c$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/drawing.c$(DependSuffix): drawing.c
+	@$(CC) $(CFLAGS) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/drawing.c$(ObjectSuffix) -MF$(IntermediateDirectory)/drawing.c$(DependSuffix) -MM drawing.c
+
+$(IntermediateDirectory)/drawing.c$(PreprocessSuffix): drawing.c
+	$(CC) $(CFLAGS) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/drawing.c$(PreprocessSuffix) drawing.c
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)

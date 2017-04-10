@@ -24,10 +24,10 @@
   <Project Name="w4o5" Path="w4o5/w4o5.project" Active="No"/>
   <Project Name="w5o0" Path="w5o0/w5o0.project" Active="No"/>
   <Project Name="w5o1" Path="w5o1/w5o1.project" Active="No"/>
-  <Project Name="w5o2" Path="w5o2/w5o2.project" Active="No"/>
+  <Project Name="w5o2" Path="w5o2/w5o2.project" Active="Yes"/>
   <Project Name="w5o3" Path="w5o3/w5o3.project" Active="No"/>
   <Project Name="Test" Path="Test/Test.project" Active="No"/>
-  <Project Name="legobots" Path="legobots/legobots.project" Active="Yes"/>
+  <Project Name="legobots" Path="legobots/legobots.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

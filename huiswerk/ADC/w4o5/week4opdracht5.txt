@@ -1,0 +1,22 @@
+// plaatst alle gevonden woorden uit de ascii file in een array, woord is opgebouwd uit alphanumerieke karakters
+// niet bekend hoe lang de woorden zijn. max 1000 woorden en gebruik isalnum
+// bepalen lengte moet de file 1x doorgelopen worden
+
+int getWords(char* filename, int word_size, char a[][word_size]){
+
+}
+
+int main(void) {
+	int word_size;
+	// lees de hele file voor het bepalen van de lengte van het langste woord
+	char a[1000][word_size];
+	int n = getWords("week4opdracht5.txt", size, a);
+	if (n > 0){
+		puts("gevonden woorden:");
+		for (int i = 0;i < n; i++){
+			printf("%3d %s\n",i,a[i]);
+		}
+	}
+
+	return 0;
+}

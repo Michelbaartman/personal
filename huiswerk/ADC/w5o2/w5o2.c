@@ -34,9 +34,9 @@ void stack_push(Stack* st, char data)
 char stack_show(Stack st)
 {
     if(st.top > -1){
-        printf("[%c]", (st.a)[st.top]);
+        printf("%c", (st.a)[st.top]);
 		for(int i = (st.top)-1; i>-1; i--){
-			printf("->[%c]", st.a[i]);
+			printf("%c", st.a[i]);
 		}
         putchar('\n');
     } else {
@@ -56,39 +56,32 @@ char stack_pop(Stack* st)
 	return data;
 }
 
-
-/*! \brief stringStacking
- *  grabs a char array, then stacks ( < [ { ontop of one another. afterwards pops them out again one by one.
+/*! \brief stringCheck
+ *  Checks the stacked string
  */
-int stringStacking(char* a[])
+int stringCheck(char* a[])
 {
-	putchar('\n');
-	printf("stringStacking...");
-	putchar('\n');
-    Stack stack = {{0}, -1};
+    Stack stack = {{0}, -1, 0};
     int count = 0;
     char* p = a;
 	char* pPrev = p;
-	
+
     while(*p != '\0'){
+		// als een ingelezen karakter een openingshaakje is, wordt het op de stack geplaatst.
         if(*p == '(' || *p == '<' || *p == '[' || *p == '{'){
-            // placed on stack
             stack_push(&stack, *p);
-			// show top of stack
-            stack_show(stack);
-        } else if(*p == ')' && *pPrev == '(' || *p == '>' && *pPrev == '(' || *p == ']' && *pPrev == '(' || *p == '}' && *pPrev == '('){
-			// pops from stack
+		// als een ingelezen haakje een sluitingshaakje is, wordt nagegaan wat het karakter op de top van de stack is
+		// is het karakter het corresponderende openingshaakje, dan wordt dit karakter van de stack verwijderd. 
+		} else if(*p == ')' && stack.a[stack.top] == '(' || *p == '>' && stack.a[stack.top] == '<' || *p == ']' && stack.a[stack.top] == '[' || *p == '}' && stack.a[stack.top] == '{'){
 			stack_pop(&stack);
-			stack_show(stack);
-		} else{ // if invalid, breaks loop.
-			printf("found a invalid char in string, stopping stringStacking...");
-			break;
+		} else{ // is de stack leeg of is het karakter niet het corresponderende openingshaakje, dan is de haakjesexpressie niet geldig.
+			printf("invalid stack");
+			return 0;
 		}
-		pPrev = p;
 		p ++;
+		stack_show(stack);
     }
-	putchar('\n');
-	putchar('\n');
+	return 1;
 }
 
 /*! \brief main
@@ -96,18 +89,13 @@ int stringStacking(char* a[])
  */
 int main(void)
 {
-    char string1[STACKSIZE] = {"((<<>>))"};
-	char string2[STACKSIZE] = {"[<{<()>}>]"};
-	char string3[STACKSIZE] = {"( ͡° ͜ʖ ͡°)"};
+	char string1[STACKSIZE] = "((<<>>))";
+	char string2[STACKSIZE] = "[<{<()>}>]";
+	char string3[STACKSIZE] = "( ͡° ͜ʖ ͡°)";
 	
-	printf("input = %s", string1);
-    stringStacking(string1);
-	
-	printf("input = %s", string2);
-	stringStacking(string2);
-	
-	printf("input = %s", string3);
-	stringStacking(string3);
+    stringCheck(string1);
+	stringCheck(string2);
+	stringCheck(string3);
 	
     return 0;
 }

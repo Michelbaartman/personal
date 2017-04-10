@@ -16,32 +16,48 @@
  */
 int get_bit(char ch, int n){
 	// returns bitdata n of byte ch. the bits are numbered from left to right (beginning with 0)
+	int bit = 0;
 	for(int i = 0; i < 8 ; i++){
-		if(i == n){ // if i reaches the given n (position in the byte), returns the value of the bit
-			if(ch & 0x80){
-				return 1;
-			} else {
-				return 0;
+		if(ch & 0x80){
+			if(i == n){
+				bit = 1;
 			}
+			printf("1");
+		} else {
+			printf("0");
+			bit = 0;
 		}
 		ch <<=1;
 	}
-	return 0;
+	return bit;
 }
 
 /*! \brief verschuif_cyclisch
  *  move bits within char ch either with a negative or positive value, then return a new byte.
  */
- 
 char verschuif_cyclisch(char ch, int n){
-	// move bits within char ch either negative or positive based on n, then return new byte & char.
+	char set = ch;
+	if(n > 0){ // Als n > 0 dan wordt n posities naar links geschoven. De weggevallen bits worden rechts teruggeplaatst.
+		ch = (ch << n) | (ch >> (8-n));
+	} else { // Als n < 0 dan wordt n posities naar rechts geschoven. De weggevallen bits worden links teruggeplaatst.
+		ch = (ch >> n*-1) | (ch << (8-n)); // !!waarom werkt de vergelijking niet?
+	return ch;
 }
 
 int main(int argc, char **argv)
 {
 	printf("week 3 opdracht 5\n");
-
-	printf("%d", get_bit('h', 0));
 	
-	return 0;
+	//grabs the second bit from 'h'
+	printf("get_bit()\n");
+	printf("\n%d\n", get_bit('h', 0));
+	
+	//shuffles a bit within h to the left
+	printf("verschuif_cyclisch()\n");
+	char c = 'h';
+	printf("\n%d\n", get_bit(c, 1));
+	c = verschuif_cyclisch(c, 2);
+	printf("\n%d\n", get_bit(c, 1));
+	c = verschuif_cyclisch(c, -4);
+	printf("\n%d\n", get_bit(c, 1));
 }

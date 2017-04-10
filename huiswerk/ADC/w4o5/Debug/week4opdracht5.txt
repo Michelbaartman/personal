@@ -1,0 +1,4 @@
+De functie plaatst alle gevonden woorden uit de ASCII-file in een array.
+Een woord is opgebouwd uit alphanumerieke karakters. Het is niet bekend hoe lang de woorden
+kunnen zijn. De file bevat maximaal 1000 woorden.
+Gebruik de functie 'isalnum'. (zie http://www.cplusplus.com/reference/cctype/isalnum/ ) 
