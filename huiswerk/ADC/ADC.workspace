@@ -16,7 +16,7 @@
   <Project Name="Game" Path="Game/Game.project" Active="No"/>
   <Project Name="w2o3n" Path="w2o3n/w2o3n.project" Active="No"/>
   <Project Name="w3o4" Path="w3o4/w3o4.project" Active="No"/>
-  <Project Name="w3o5" Path="w3o5/w3o5.project" Active="No"/>
+  <Project Name="w3o5" Path="w3o5/w3o5.project" Active="Yes"/>
   <Project Name="w4o1" Path="w4o1/w4o1.project" Active="No"/>
   <Project Name="w4o2" Path="w4o2/w4o2.project" Active="No"/>
   <Project Name="w4o3" Path="w4o3/w4o3.project" Active="No"/>
@@ -24,7 +24,7 @@
   <Project Name="w4o5" Path="w4o5/w4o5.project" Active="No"/>
   <Project Name="w5o0" Path="w5o0/w5o0.project" Active="No"/>
   <Project Name="w5o1" Path="w5o1/w5o1.project" Active="No"/>
-  <Project Name="w5o2" Path="w5o2/w5o2.project" Active="Yes"/>
+  <Project Name="w5o2" Path="w5o2/w5o2.project" Active="No"/>
   <Project Name="w5o3" Path="w5o3/w5o3.project" Active="No"/>
   <Project Name="Test" Path="Test/Test.project" Active="No"/>
   <Project Name="legobots" Path="legobots/legobots.project" Active="No"/>

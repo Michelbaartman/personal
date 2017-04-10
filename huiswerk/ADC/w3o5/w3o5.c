@@ -36,11 +36,11 @@ int get_bit(char ch, int n){
  *  move bits within char ch either with a negative or positive value, then return a new byte.
  */
 char verschuif_cyclisch(char ch, int n){
-	char set = ch;
 	if(n > 0){ // Als n > 0 dan wordt n posities naar links geschoven. De weggevallen bits worden rechts teruggeplaatst.
 		ch = (ch << n) | (ch >> (8-n));
 	} else { // Als n < 0 dan wordt n posities naar rechts geschoven. De weggevallen bits worden links teruggeplaatst.
 		ch = (ch >> n*-1) | (ch << (8-n)); // !!waarom werkt de vergelijking niet?
+	}
 	return ch;
 }
 
@@ -58,6 +58,6 @@ int main(int argc, char **argv)
 	printf("\n%d\n", get_bit(c, 1));
 	c = verschuif_cyclisch(c, 2);
 	printf("\n%d\n", get_bit(c, 1));
-	c = verschuif_cyclisch(c, -4);
+	c = verschuif_cyclisch(c, -2);
 	printf("\n%d\n", get_bit(c, 1));
 }
